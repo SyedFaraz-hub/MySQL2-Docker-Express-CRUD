@@ -1,0 +1,18 @@
+CREATING THE MYSQL CONTAINER WITH VOLUME
+
+docker run -d -p 3306:3306 --rm -v mysqldata:var/lib/mysql -e MYSQL_ROOT_PASSWORD='test' mysql:latest
+
+
+TERMINAL COMMAND TO CONFIG SQL
+
+mysql -u root -p<password>
+
+create database ecomm;
+
+use ecomm;
+
+create table products( id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(32) NOT NULL, description VARCHAR(255) NOT NULL, PRICE INT NOT NULL );
+
+show tables;
+
+desc products;
